@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f7f4ff;
+}
+
+.container {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 置中 */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #6a4bbd;
+  font-size: 26px;
+}
+
+/* 表單元素 */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 置中 */
+}
+
+label {
+  align-self: flex-start; /* 標籤靠左 */
+  font-weight: bold;
+  color: #4a3d80;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #c9bff2;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: #6a4bbd;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #5739a4;
+}
+
+#message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #5a4bcf;
+}

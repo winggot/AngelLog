@@ -1,0 +1,91 @@
+/* 全局樣式 */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f2ff; /* 淡紫背景 */
+  color: #333;
+}
+
+.container {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+/* 標題 */
+h2 {
+  text-align: center;
+  color: #6a4bbd;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* 歷史卡片 */
+.card {
+  background: linear-gradient(135deg, #ffffff, #f0ebff); /* 漸層卡片 */
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+/* 淡入 + 上升動畫 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 文字樣式 */
+.card p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.card .timestamp {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+/* emoji 心情圖示 */
+.card .mood::before {
+  content: "💖 ";
+}
+
+/* emoji 天使數字圖示 */
+.card .number::before {
+  content: "✨ ";
+}
+
+/* 備註樣式 */
+.card .note {
+  color: #555;
+  font-style: italic;
+}
+
+/* 空清單提示 */
+#historyList p {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+/* 手機優化 */
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .card {
+    padding: 14px;
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>😇天使數字紀錄器</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>🪽 天使數字紀錄器</h2>
+
+    <form id="angelForm">
+      <label>看到的天使數字</label>
+      <input type="text" id="number" placeholder="例如 111、222、1234" required>
+
+      <label>當下心情</label>
+      <input type="text" id="mood" placeholder="描述一下當下感受..." required>
+
+      <label>備註（可選）</label>
+      <textarea id="note" placeholder="在哪裡看到、當時情境..."></textarea>
+
+      <button type="submit">送出紀錄</button>
+    </form>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
