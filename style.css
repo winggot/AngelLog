@@ -2,28 +2,27 @@
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-image: url("img/bg.avif"); /* 使用 avif 背景圖 */
-  background-size: cover;               /* 填滿畫面 */
-  background-position: center;          /* 置中 */
-  background-repeat: no-repeat;         /* 不重複 */
-  background-attachment: fixed;         /* 滾動時固定背景 */
+  background-image: url("img/premium_photo-1667422070296-5872f0592e30.avif");
+  background-size: cover;        /* 填滿畫面 */
+  background-position: center;   /* 置中 */
+  background-repeat: no-repeat;  /* 不重複 */
+  background-attachment: fixed;  /* 滾動時固定背景 */
 }
 
-/* 容器 */
+/* 表單容器 */
 .container {
   max-width: 420px;
   margin: 40px auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* 半透明白底，讓背景透出 */
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center; /* 置中 */
+  align-items: center;
 }
 
-/* 標題 */
-.title {
+.container h2 {
   text-align: center;
   margin-bottom: 25px;
   color: #6a4bbd;
@@ -35,11 +34,11 @@ form {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 置中 */
+  align-items: center;
 }
 
 label {
-  align-self: flex-start; /* 標籤靠左 */
+  align-self: flex-start;
   font-weight: bold;
   color: #4a3d80;
   margin-bottom: 6px;
@@ -56,7 +55,6 @@ textarea {
   box-sizing: border-box;
 }
 
-/* 按鈕 */
 button {
   width: 100%;
   padding: 12px;
@@ -73,7 +71,6 @@ button:hover {
   background: #5739a4;
 }
 
-/* 訊息 */
 #message {
   text-align: center;
   margin-top: 15px;
@@ -81,9 +78,12 @@ button:hover {
   color: #5a4bcf;
 }
 
-/* 天使數字意義區塊 */
-.angel-meaning {
-  max-width: 800px;
+/* 外層容器：表格 + 特殊解讀 */
+.angel-info {
+  display: flex;
+  flex-wrap: wrap;       /* 小螢幕自動換行 */
+  gap: 24px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 20px;
   background: rgba(255, 255, 255, 0.9);
@@ -91,29 +91,58 @@ button:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-.angel-meaning h2 {
+/* 表格區域 */
+.table-area {
+  flex: 2;
+  min-width: 300px;
+}
+
+.table-area h2 {
   text-align: center;
   color: #6a4bbd;
   margin-bottom: 20px;
 }
 
-.angel-meaning table {
+.table-area table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.angel-meaning th,
-.angel-meaning td {
+.table-area th,
+.table-area td {
   border: 1px solid #c9bff2;
   padding: 12px;
   text-align: center;
 }
 
-.angel-meaning th {
+.table-area th {
   background: #6a4bbd;
   color: white;
 }
 
-.angel-meaning tr:nth-child(even) {
+.table-area tr:nth-child(even) {
+  background: #f7f4ff;
+}
+
+/* 特殊解讀區域 */
+.special-meaning table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.special-meaning th,
+.special-meaning td {
+  border: 1px solid #c9bff2;
+  padding: 10px;
+  text-align: center;
+}
+
+.special-meaning th {
+  background: #4a3d80;
+  color: white;
+}
+
+.special-meaning tr:nth-child(even) {
   background: #f7f4ff;
 }
